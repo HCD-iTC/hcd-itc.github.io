@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>HCD0010 - Clarification on FPT_SBT_EXT.1 Root of Trust</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div style="page-break-before:always; page-break-after:always"><div><p><b>HCD0010 - Clarification on<br/>FPT_SBT_EXT.1 Root of Trust<br/></b></p>
+<p>Version: 1, Published: 2024-11-18<br/></p>
+<p><b>Impacted Documents<br/></b>&#8226; CPP_HCD_V1.0e,<br/>&#8226; SD_HCD_V1.0e<br/></p>
+<p><b>References<br/></b>CPP, SD: FPT_SBT_EXT.1 Extended: Secure Boot<br/></p>
+<p><b>Issue Description<br/></b>FPT_SBT_EXT.1 states that Root of Trust is implemented in immutable code or a HW-based write-<br/>protection mechanism. HCD cPP provides no further description or additional detail on the<br/>definition for the Root of Trust in terms of its protection. &#8220;Appendix G: Glossary&#8221; also fails to<br/>provide further information on this matter.<br/></p>
+<p>SD includes a requirement that the TSS shall describe how the Root of Trust is immutable. However,<br/>HCD cPP is not clear on how the immutable code or HW-based write-protection is defined. The SD<br/>does not provide clear guidance on the level of assurance the evaluator shall take into<br/>consideration to confirm a compliant Root of Trust protection mechanism.<br/></p>
+<p><b>Resolution<br/></b>&#8226; Define &quot;Immutable&quot; term in Glossary consistent with definition in NIST SP800-193, &quot;Platform<br/></p>
+<p>Firmware Resiliency Guidelines&quot;.<br/>&#8226; Modify FPT_SBT_EXT.1 SFR to remove &quot;HW-based write protection mechanism&quot;, relying on<br/></p>
+<p>newly added immutable definition.<br/></p>
+<p><b>CPP_HCD_V1.0e<br/></b>&#8226; Add &quot;Immutable&quot; definition to cPP Appendix G: Glossary:<br/></p>
+<p>1</p>
+
+</div></div>
+<div style="page-break-before:always; page-break-after:always"><div><p>Immutabl<br/>e<br/></p>
+<p>Unchangeable. In the context of this document, this refers only to the inability to make<br/>changes in the field through manufacturer intended mechanisms and/or defined<br/>interfaces. Note that a platform or device manufacturer may still be able to make<br/>changes through manufacturing or service tools directly connected to a locally<br/>(physically) present platform or device.<br/></p>
+<p>&#8226; Modify cPP FPT_SBT_EXT.1 SFR to remove &quot;HW-based write protection mechanism&quot;:<br/></p>
+<p>Old: FPT_SBT_EXT.1.1 The TSF shall contain one or more chains of trust with each chain of trust<br/>anchored in a Root of Trust that is implemented in immutable code or a HW-based write-<br/>protection mechanism.<br/></p>
+<p>New<br/>:<br/></p>
+<p>FPT_SBT_EXT.1.1 The TSF shall contain one or more chains of trust with each chain of trust<br/>anchored in an immutable Root of Trust.<br/></p>
+<p><b>SD_HCD_V1.0e:<br/></b>&#8226; Add &quot;Immutable&quot; definition to SD Appendix C: Glossary:<br/></p>
+<p>Immutabl<br/>e<br/></p>
+<p>Unchangeable. In the context of this document, this refers only to the inability to make<br/>changes in the field through manufacturer intended mechanisms and/or defined<br/>interfaces. Note that a platform or device manufacturer may still be able to make<br/>changes through manufacturing or service tools directly connected to a locally<br/>(physically) present platform or device.<br/></p>
+<p><b>Tracking<br/></b>Issue #25<br/></p>
+<p>2</p>
+
+</div></div>
+</body></html>
